@@ -5,6 +5,6 @@ import datastruct.Pair;
 public class Price extends IFeature<Pair<Double, Double>> {
 
     public FeatureType getType() {
-        return null;
+        return FeatureType.PRICE;
     }
 }

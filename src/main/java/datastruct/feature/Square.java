@@ -1,8 +1,10 @@
 package datastruct.feature;
 
-public class Square extends IFeature<Double> {
+import datastruct.Pair;
+
+public class Square extends IFeature<Pair<Double, Double>> {
 
     public FeatureType getType() {
-        return null;
+        return FeatureType.SQUARE;
     }
 }
