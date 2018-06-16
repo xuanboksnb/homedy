@@ -4,6 +4,10 @@ import datastruct.Item;
 import datastruct.feature.Content;
 
 public class FContentScoring extends Scoring<Content> {
+    public FContentScoring(Item[] historyItems) {
+        super(historyItems);
+    }
+
     protected void featureExtracting() {
 
     }

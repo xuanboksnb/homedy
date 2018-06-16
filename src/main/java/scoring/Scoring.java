@@ -12,6 +12,11 @@ import java.util.List;
  * @param <K>: FeatureType corresponding to concrete class which implemented.
  */
 public abstract class Scoring<K> {
+    public Scoring(Item[] historyItems) {
+        this.historyItems = historyItems;
+        featureExtracting();
+    }
+
     /**
      * history items viewed of an user
      */
@@ -24,6 +29,7 @@ public abstract class Scoring<K> {
 
     /**
      * variable holding processed result of featureExtracting()
+     * the basic version: just store every features sorted by view_time.
      */
     protected List<Pair<K, Long>> extractedFeature;
 

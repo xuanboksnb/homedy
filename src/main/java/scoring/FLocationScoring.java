@@ -3,9 +3,22 @@ package scoring;
 import datastruct.Item;
 import datastruct.feature.Location;
 
-public class FLocationScoring extends Scoring<Location> {
-    protected void featureExtracting() {
+import java.util.ArrayList;
 
+public class FLocationScoring extends Scoring<Location> {
+
+    public FLocationScoring(Item[] historyItems) {
+        super(historyItems);
+    }
+
+    protected void featureExtracting() {
+        if (this.historyItems == null)
+            return;
+
+        extractedFeature = new ArrayList<>();
+        for (int i = 0; i < historyItems.length; i ++) {
+
+        }
     }
 
     public double score(Item item) {
