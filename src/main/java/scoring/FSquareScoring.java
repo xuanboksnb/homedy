@@ -3,8 +3,10 @@ package scoring;
 import datastruct.Item;
 import datastruct.feature.Square;
 
+import java.util.List;
+
 public class FSquareScoring extends Scoring<Square> {
-    public FSquareScoring(Item[] historyItems) {
+    public FSquareScoring(List<Item> historyItems) {
         super(historyItems);
     }
 
