@@ -2,6 +2,7 @@ package datastruct.feature;
 
 public class RoomNumber extends IFeature<Integer> {
     public RoomNumber(Integer value) {
+        super(value);
         this.value = value;
     }
 

@@ -28,14 +28,14 @@ public class FLocationScoring extends Scoring<Location> {
         if (this.historyItems == null)
             return;
 
-        Map<Location, Integer> locFrequent = new HashMap<>();
+        Map<Location, Integer> locFrequency = new HashMap<>();
         for (int i = 0; i < historyItems.size(); i ++) {
             Location l = historyItems.get(i).getLocation();
-            locFrequent.put(l, 1 + (locFrequent.containsKey(l) ? locFrequent.get(l) : 0));
+            locFrequency.put(l, 1 + (locFrequency.containsKey(l) ? locFrequency.get(l) : 0));
         }
 
-        for (Location l : locFrequent.keySet()) {
-            extractedFeature.add(new Pair<>(l, (double) locFrequent.get(l)));
+        for (Location l : locFrequency.keySet()) {
+            extractedFeature.add(new Pair<>(l, (double) locFrequency.get(l)));
         }
 
         weighting();

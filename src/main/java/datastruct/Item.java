@@ -4,7 +4,7 @@ import datastruct.feature.*;
 
 public class Item {
     private String id;
-    private Square square;
+    private Acreage acreage;
     private Location location;
     private Price price;
     private Content content;
@@ -22,12 +22,12 @@ public class Item {
         this.id = id;
     }
 
-    public Square getSquare() {
-        return square;
+    public Acreage getAcreage() {
+        return acreage;
     }
 
-    public void setSquare(Square square) {
-        this.square = square;
+    public void setAcreage(Acreage acreage) {
+        this.acreage = acreage;
     }
 
     public Location getLocation() {

@@ -3,6 +3,10 @@ package datastruct.feature;
 import datastruct.Pair;
 
 public class Location extends IFeature<Pair<String, String>> {
+    public Location(Pair<String, String> value) {
+        super(value);
+    }
+
     public FeatureType getType() {
         return FeatureType.LOCATION;
     }

@@ -18,6 +18,9 @@ public class FRoomNumberScoring extends Scoring<RoomNumber> {
     }
 
     protected void featureExtracting() {
+        if (this.historyItems == null)
+            return;
+
         List<Integer> viewedRoomNumbers = new ArrayList<>();
         for (int i = 0; i < historyItems.size(); i ++) {
             if (historyItems.get(i).getRoomNumber().value > 0)

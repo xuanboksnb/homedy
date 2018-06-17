@@ -6,11 +6,15 @@ package datastruct.feature;
  */
 public abstract class IFeature<V> {
     public enum FeatureType {
-        SQUARE,
+        ACREAGE,
         PRICE,
         LOCATION,
         CONTENT,
         ROOM_NUMBER
+    }
+
+    public IFeature(V value) {
+        this.value = value;
     }
 
     public V value;
